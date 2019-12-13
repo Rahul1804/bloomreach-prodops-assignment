@@ -122,7 +122,7 @@ workflows:
           region: AWS_DEFAULT_REGION
           repo: br-test
           dockerfile: ~/bloomreach-prodops-assignment/app/Dockerfile
-          path: ~/project/app
+          path: ~/bloomreach-prodops-assignment/app
           tag: ${CIRCLE_SHA1}
           # Uncomment if the repository does not yet exist
           # create-repo: true
