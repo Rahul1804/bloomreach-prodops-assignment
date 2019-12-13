@@ -121,8 +121,8 @@ workflows:
           account-url: AWS_ECR_URL
           region: AWS_DEFAULT_REGION
           repo: br-test
-          dockerfile: Dockerfile
-          path: /bloomreach-prodops-assignment/app/
+          dockerfile: /bloomreach-prodops-assignment/app/Dockerfile
+          # path: /bloomreach-prodops-assignment/app/
           tag: ${CIRCLE_SHA1}
           # Uncomment if the repository does not yet exist
           # create-repo: true
