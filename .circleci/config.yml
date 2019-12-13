@@ -123,7 +123,7 @@ workflows:
           repo: br-test
           dockerfile: ~/project/bloomreach-prodops-assignment/app/Dockerfile
           path: ~/project/bloomreach-prodops-assignment/app
-          #tag: ${CIRCLE_SHA1}
+          tag: ${CIRCLE_SHA1}
           #tag: latest
           # Uncomment if the repository does not yet exist
           # create-repo: true
