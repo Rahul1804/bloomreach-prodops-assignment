@@ -26,5 +26,24 @@ spec:
           value: "VERSION_INFO_VALUE"
         - name: BUILD_DATE
           value: "BUILD_DATE_VALUE"
+        - name: REDIS_HOST
+          value: http://10.8.6.12  #assigned static cluster ip to redis service
+        - name: REDIS_PORT
+          value: "6379"
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: redissecret
+              key: USERNAME
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redissecret
+              key: PASSWORD
+        - name: THEBIGSECRET
+          valueFrom:
+            secretKeyRef:
+              name: redissecret
+              key: THEBIGSECRET
         ports:
         - containerPort: 5000

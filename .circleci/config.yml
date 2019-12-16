@@ -55,6 +55,8 @@ jobs:
           resource-name: deployment/demoapp
       - kubernetes/create-or-update-resource:
           resource-file-path: "deployment/demo-app-redis-service.yaml"
+      - kubernetes/create-or-update-resource:
+          resource-file-path: "deployment/redis-secret.yaml"
 
 workflows:
   deployment:
