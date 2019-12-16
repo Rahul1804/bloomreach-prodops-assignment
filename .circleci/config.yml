@@ -72,7 +72,7 @@ workflows:
           # Uncomment if the repository does not yet exist
           # create-repo: true
       - aws-eks/create-cluster:
-          cluster-name: br-test-cluster
+          cluster-name: test-cluster
           aws-region: $AWS_DEFAULT_REGION
           requires:
             - build-and-push-image
