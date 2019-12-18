@@ -72,12 +72,12 @@ workflows:
           # Uncomment if the repository does not yet exist
           # create-repo: true
       - aws-eks/create-cluster:
-          cluster-name: br-test-k8s-6
+          cluster-name: br-test-k8s-7
           aws-region: $AWS_DEFAULT_REGION
           requires:
             - build-and-push-image
       - deploy-application:
-          cluster-name: br-test-k8s-6
+          cluster-name: br-test-k8s-7
           aws-region: $AWS_DEFAULT_REGION
           docker-image-name: "${AWS_ECR_URL}/br-test:${CIRCLE_SHA1}"
           version-info: "${CIRCLE_SHA1}"
